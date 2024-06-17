@@ -1,57 +1,52 @@
 <!DOCTYPE html>
 <html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Events: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
 
-<head>
-  <meta charset="utf-8" />
-  <title>Events: Task 1</title>
-  <style>
-    p {
-      color: purple;
-      margin: 0.5em 0;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    * {
-      box-sizing: border-box;
-    }
+      button {
+        display: block;
+        margin: 20px 0 20px 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
 
-    button {
-      display: block;
-      margin: 20px 0 20px 20px;
-    }
-  </style>
-  <link rel="stylesheet" href="../styles.css" />
-</head>
+  <body>
+    <section class="preview"></section>
 
-<body>
+    <button class="off">Machine is off</button>
 
-  <section class="preview">
-  </section>
+    <script>
+      const btn = document.querySelector(".off");
 
-  <button class="off">Machine is off</button>
+      // Add your code here
 
-  <script>
-    const btn = document.querySelector('.off');
+      let defaultColor = btn.style.color;
+      let secondaryColor = randomColor();
 
-    // Add your code here
+      function randomColor() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        return `rgb(${r}, ${g}, ${b})`;
+      }
 
-    let defaultColor = btn.style.color;
-    let secondaryColor = randomColor();
+      function changeColor() {
+        btn.style.color =
+          btn.style.color === defaultColor ? secondaryColor : defaultColor;
+      }
 
-    function randomColor() {
-      const r = Math.floor(Math.random() * 256);
-      const g = Math.floor(Math.random() * 256);
-      const b = Math.floor(Math.random() * 256);
-      return `rgb(${r}, ${g}, ${b})`;
-    }
-
-    function changeColor() {
-      btn.style.color = btn.style.color === defaultColor ? secondaryColor : defaultColor;
-    }
-
-    btn.addEventListener('click', changeColor);
-
-  </script>
-
-</body>
-
+      btn.addEventListener("click", changeColor);
+    </script>
+  </body>
 </html>
