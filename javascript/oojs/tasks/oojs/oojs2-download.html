@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>OOJS: Task 2</title>
     <style>
       p {
@@ -17,16 +17,42 @@
   </head>
 
   <body>
-
-    <section class="preview">
-
-
-
-    </section>
-
+    <section class="preview"></section>
   </body>
   <script>
+    class Shape {
+      name;
+      sides;
+      sideLength;
 
+      constructor(name, sides, sideLength) {
+        this.name = name;
+        this.sides = sides;
+        this.sideLength = sideLength;
+      }
+
+      calcPerimeter() {
+        const perimeter = this.sides * this.sideLength;
+        console.log(perimeter);
+      }
+    }
+
+    class Square extends Shape {
+      constructor(sideLength) {
+        super(Shape);
+        this.name = "square";
+        this.sides = 4;
+        this.sideLength = sideLength;
+      }
+
+      calcArea() {
+        const area = this.sideLength ** 2;
+        console.log(area);
+      }
+    }
+
+    const square = new Square(6);
+    square.calcPerimeter();
+    square.calcArea();
   </script>
-
 </html>
