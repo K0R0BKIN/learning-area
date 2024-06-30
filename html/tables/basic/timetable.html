@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>School timetable</title>
     <style>
-    html {
-      font-family: sans-serif;
-    }
+      html {
+        font-family: sans-serif;
+      }
 
-    table {
-      border-collapse: collapse;
-      border: 1px solid;
-      letter-spacing: 0.5px;
-      font-size: 0.9rem;
-    }
+      table {
+        border-collapse: collapse;
+        border: 1px solid;
+        letter-spacing: 0.5px;
+        font-size: 0.9rem;
+      }
 
-    td, th {
-      border: 1px solid;
-      padding: 10px 20px;
-    }
+      td,
+      th {
+        border: 1px solid;
+        padding: 10px 20px;
+      }
 
-    td {
-      text-align: center;
-    }
+      td {
+        text-align: center;
+      }
 
-    caption {
-      padding: 10px;
-    }
+      caption {
+        padding: 10px;
+      }
     </style>
   </head>
+
   <body>
     <h1>School timetable</h1>
 
     <table>
+      <colgroup>
+        <col span="2" />
+        <col style="background-color: #97db9a" />
+        <col style="width: 42px" />
+        <col style="background-color: #97db9a" />
+        <col style="background-color: #dcc48e; border: 4px solid #c1437a" />
+        <col span="2" style="width: 42px" />
+      </colgroup>
       <tr>
-        <td></td>
+        <td>&nbsp;</td>
         <th>Mon</th>
         <th>Tues</th>
         <th>Wed</th>
@@ -47,45 +57,43 @@
       <tr>
         <th>1st period</th>
         <td>English</td>
-        <td></td>
-        <td></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
         <td>German</td>
         <td>Dutch</td>
-        <td></td>
-        <td></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
       <tr>
         <th>2nd period</th>
         <td>English</td>
         <td>English</td>
-        <td></td>
+        <td>&nbsp;</td>
         <td>German</td>
         <td>Dutch</td>
-        <td></td>
-        <td></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
       <tr>
         <th>3rd period</th>
-        <td></td>
+        <td>&nbsp;</td>
         <td>German</td>
-        <td></td>
+        <td>&nbsp;</td>
         <td>German</td>
         <td>Dutch</td>
-        <td></td>
-        <td></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
       <tr>
         <th>4th period</th>
-        <td></td>
+        <td>&nbsp;</td>
         <td>English</td>
-        <td></td>
+        <td>&nbsp;</td>
         <td>English</td>
         <td>Dutch</td>
-        <td></td>
-        <td></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
     </table>
-
-
   </body>
 </html>
